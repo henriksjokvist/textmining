@@ -7,8 +7,10 @@ warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
 
 from gensim.models import KeyedVectors
 
+
 # Creating the model
-sv_model = KeyedVectors.load('sv.bin')
+sv_model = KeyedVectors.load_word2vec_format('wiki.sv.vec', binary=False, limit=50000)
+
 
 # Getting the tokens
 words = []
@@ -21,8 +23,7 @@ print("Number of Tokens: {}".format(len(words)))
 print("Dimension of a word vector: {}".format(
     len(sv_model[words[0]])
 ))
-#print(words[:10])
-#print(sv_model['bank'])
+
 
 # Pick a word
 find_similar_to = 'handelsbanken'
@@ -37,7 +38,7 @@ for similar_word in sv_model.similar_by_word(find_similar_to):
 
 print("\n")
 
-for similar_word in sv_model.wv.most_similar_cosmul(positive=['yrke', 'kvinna'], negative=['män']):
+for similar_word in sv_model.wv.most_similar(positive=['kung', 'kvinna'], negative=['man']):
     print("Word: {0}, Similarity: {1:.2f}".format(
         similar_word[0], similar_word[1]
     ))
