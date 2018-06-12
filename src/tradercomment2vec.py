@@ -155,8 +155,3 @@ def tradercomment2vec():
 
 
 tradercomment2vec()
-
-
-# create new project with only necessary files
-# push everything to github
-# create a folder where outputs are dumped
