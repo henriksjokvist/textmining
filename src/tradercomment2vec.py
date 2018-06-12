@@ -84,9 +84,9 @@ def convert_row(row):
 
 def tradercomment2vec():
     """Model settings"""
-    SEGT = "SIF"                        # Sentence Embedding Generation Technique, "Avg" or "SIF"
+    SEGT = "Avg"                        # Sentence Embedding Generation Technique, "Avg" or "SIF"
     a = 1e-3                            # for SIF
-    clustering_algorithm = "DBSCAN"     # "KM" or "DBSCAN"
+    clustering_algorithm = "KM"     # "KM" or "DBSCAN"
     k = 130                             # for k-means
     epsilon = 0.1                           # for DBSCAN
     minPts = 9                          # for DBSCAN
