@@ -1,3 +1,3 @@
-Swedish pre-trained word vectors can be found here 
-https://github.com/Kyubyong/wordvectors (~50,000 words) and 
-here https://github.com/facebookresearch/fastText/blob/master/pretrained-vectors.md (~1.1 M words)
+Implementation of the algorithm from http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-228536
+
+In order to run the algorithm, download a pre-trained fastText word embedding model and place in the word_embeddings folder. In the thesis the Swedish .bin embeddings from https://fasttext.cc/docs/en/pretrained-vectors.html were used.
